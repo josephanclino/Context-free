@@ -1,0 +1,35 @@
+startshape scatter
+background{ b - 1 }
+
+rule scatter {
+    daggers{ x -10 y 45 r 25 b 1 }
+    scatter{ x 50 y 50 s 0.9 b -0.1 hue 3 sat 0.5 r 45 }
+}
+
+rule daggers {
+    toss{}
+    toss{ r 90 }
+    toss{ r 180 }
+    toss{ r 270 }
+}
+
+rule toss {
+    dagger{}
+    toss{ r 20 s 0.7 }
+    toss{ r -20 s 0.7 }
+}
+
+path dagger {
+    MOVEREL { y 10 }
+    LINETO { x 0 y 20 }
+    ARCTO { x 0 y 15 rx 15 ry 10 r 3 }
+    MOVEREL { x 0 y 20 }
+    ARCTO { x 0 y 15 rx 15 ry -10 r 3 }
+    MOVEREL { x -2 y 15 }
+    LINETO { x 2 y 15 }
+    MOVEREL { x -2 y 15 }
+    ARCTO { x 0 y 0 rx 15 ry -10 }
+    MOVEREL { x 2 y 15 }
+    ARCTO { x 0 y 0 rx 15 ry 10 }
+    STROKE {}
+}

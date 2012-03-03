@@ -1,0 +1,24 @@
+startshape go
+
+// Favorite Variations
+// YTZ, YUP, YVO
+
+rule go {
+	cluster {}
+}
+
+rule cluster 50 {
+	bubble { hue 207 saturation .29 }
+	cluster { x randint() y randint() size 0.9 }
+}
+
+rule cluster 50 {
+	bubble { hue 207 saturation .29 }
+	cluster { x -randint() y -randint() size 1.1 }
+}
+
+
+rule bubble {
+	CIRCLE {}
+	bubble { size 0.9 brightness 0.1 }
+}

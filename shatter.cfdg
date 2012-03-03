@@ -1,0 +1,30 @@
+startshape scatter
+background { b -1 }
+
+rule scatter {
+    shatter{}
+    scatter{ x 5 y 5 r 15 s 0.99 }
+    scatter{ x -15 y -15 r 35 s 0.2 }
+}
+
+rule shatter {
+     shard{ skew 1 65 }
+     shatter{ y 5 x 2 s 0.9 r 10 }
+     shatter{ y 2 x -5 s 0.5 r 25 hue 145 sat 1.1 }
+}
+
+rule shard {
+     frag { alpha -0.5 }
+}
+
+rule shard {
+     frag { alpha 0.25 r 33 }
+}
+
+rule frag {
+     SQUARE{ b 1 }
+}
+
+rule frag {
+     TRIANGLE{ b 1 }
+}

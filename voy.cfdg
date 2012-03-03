@@ -1,0 +1,30 @@
+startshape cloudform
+
+// Favorite Variants:
+// JVN, JWA
+
+rule cloudform {
+     tag{}
+     tag{ rotate 45 }
+     tag{ hue 145 sat 1.1 }
+}
+
+rule tag {
+     stroke{}
+     stroke{ flip 90 }
+}
+
+rule stroke {
+     CIRCLE{}
+     stroke{ s 0.9 x 0.3 }
+}
+
+rule stroke {
+     CIRCLE{}
+     stroke{ s 1.1 r -30 x 0.3 b -0.3 }
+}
+
+rule stroke {
+     CIRCLE{}
+     stroke{ x 0.3 r 120 b 0.1 }
+}

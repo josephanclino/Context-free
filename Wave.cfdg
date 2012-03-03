@@ -1,0 +1,21 @@
+startshape go
+background { b -0.5 }
+
+rule go {
+	bloom {  hue 207 saturation .29 }
+}
+
+rule bloom {
+	petal {}
+	bloom { y -0.5 size 0.92 rotate 20 }
+}
+
+rule petal {
+	nodule{}
+	petal { x -0.5 size 0.85 brightness 0.2 saturation -0.1 rotate 9 }
+}
+
+rule nodule {
+	CIRCLE {}
+	nodule { rotate 7 y 0.2 size 0.95 brightness 0.1 }
+}

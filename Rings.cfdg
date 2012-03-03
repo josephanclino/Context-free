@@ -1,0 +1,41 @@
+// Adam Shamblin
+// Rings
+// Favorite Variants:  UHB, UHH, UHK
+startshape go
+
+rule go {
+	cluster {}
+	cluster { x -3 }
+	cluster { y -3 }
+	cluster { x -3 y -3 }
+}
+
+rule cluster 50 {
+	quad {}
+	cluster { x randint() y randint() size 0.5 }
+}
+
+rule cluster 50 {
+	quad {}
+	cluster { x -randint () y -randint() z -randint() size 1.1 }
+}
+
+rule quad {
+	pair {}
+	pair { y -.875 }
+}
+
+rule pair {
+	ring {}
+	ring { x .875 }
+}
+
+rule ring {
+	CIRCLE {}
+	CIRCLE { s .75 hue 360 brightness 1 }
+}
+
+rule ring {
+	ring {}
+	ring { s .50 }
+}

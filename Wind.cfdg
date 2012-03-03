@@ -1,0 +1,13 @@
+startshape wind
+background { b -0.75 }
+
+rule wind {
+	stream {}
+	wind { s .9 r 12 brightness .1 }
+}
+
+rule stream {
+	SQUARE { size 1 2 hue 207 sat .29 brightness .9 }
+	SQUARE { size 1 0.5 hue 207 sat .29 brightness .5 y 1.25 }
+	SQUARE { size 1 0.5 hue 207 sat .29 brightness .5 y -1.25 }
+}
