@@ -1,9 +1,18 @@
 // Adam Shamblin
 // Rings
-// Favorite Variants:  UHB, UHH, UHK, UJJ
+// Favorite Variants:  UHB, UHH, UHK, UJJ, TOK!
 startshape go
 
+
 rule go {
+	3 * { y 6 } row {} 
+}
+
+rule row {
+	5 * { x 6 } tiles {}
+}
+
+rule tiles {
 	cluster {}
 	cluster { x -3 }
 	cluster { y -3 }
